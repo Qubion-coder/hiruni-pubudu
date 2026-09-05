@@ -31,7 +31,7 @@ export default function StoryApp() {
   });
 
   useEffect(() => {
-    const weddingDate = new Date('2026-09-24T08:30:00').getTime();
+    const weddingDate = new Date('2026-09-26T18:00:00').getTime();
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
@@ -74,8 +74,8 @@ export default function StoryApp() {
 
   // Read personalized guest link params
   const urlParams = new URLSearchParams(window.location.search);
-  const guestPrefix = urlParams.get('prefix') || 'Mr. & Mrs./ Mr./Ms.';
-  const guestName = urlParams.get('guest') || 'Kawabe Masaki and Family';
+  const guestPrefix = urlParams.get('prefix') || '';
+  const guestName = urlParams.get('guest') || '';
 
   return (
     <>
@@ -104,7 +104,7 @@ export default function StoryApp() {
               className="z-10 flex flex-col items-center gap-8"
             >
               <h1 className="script text-6xl sm:text-7xl text-[#2C2C2C] drop-shadow-sm font-normal text-center px-4">
-                Shakila <span className="text-[#8B7355] text-5xl">&amp;</span> Madawa
+                Hiruni <span className="text-[#8B7355] text-5xl">&amp;</span> Pubudu
               </h1>
               <p className="text-sm uppercase tracking-[0.3em] text-[#2C2C2C] font-medium text-center">
                 Wedding Invitation
@@ -131,7 +131,7 @@ export default function StoryApp() {
             className="fixed inset-0 z-[100] bg-black flex items-center justify-center"
           >
             <video
-              src="/snaptik_7626793615695777044_v3 (online-video-cutter.com).mp4"
+              src="/snaptik_7650518957962792213_v3 (online-video-cutter.com).mp4"
               autoPlay
               muted
               playsInline
@@ -163,7 +163,7 @@ export default function StoryApp() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1 }}
-                className="w-full max-w-sm flex flex-col items-center justify-center text-[#3D2B1F]"
+                className="w-full max-w-sm flex flex-col items-center justify-center text-[#3D2B1F] bg-white/50 backdrop-blur-md p-8 py-10 rounded-[2.5rem] border border-white/60 shadow-xl"
               >
 
 
@@ -204,28 +204,28 @@ export default function StoryApp() {
                   <p className="text-[13px] sm:text-[15px] uppercase tracking-widest text-[#2C2C2C] font-bold mb-2">SEPTEMBER</p>
                   <div className="flex items-center justify-center w-full gap-4">
                     <div className="flex-1 text-right border-y border-[#2C2C2C]/30 py-2">
-                      <p className="text-[12px] sm:text-sm uppercase tracking-widest text-[#2C2C2C] font-bold">THURSDAY</p>
+                      <p className="text-[12px] sm:text-sm uppercase tracking-widest text-[#2C2C2C] font-bold">SATURDAY</p>
                     </div>
-                    <p className="serif text-7xl sm:text-[4.5rem] font-medium text-[#2C2C2C] leading-none px-1">24</p>
+                    <p className="serif text-7xl sm:text-[4.5rem] font-medium text-[#2C2C2C] leading-none px-1">26</p>
                     <div className="flex-1 text-left border-y border-[#2C2C2C]/30 py-2">
-                      <p className="text-[12px] sm:text-sm uppercase tracking-widest text-[#2C2C2C] font-bold">AT 8:30 AM</p>
+                      <p className="text-[11px] sm:text-[12px] uppercase tracking-widest text-[#2C2C2C] font-bold">6:00 PM ONWARDS</p>
                     </div>
                   </div>
                   <p className="text-[13px] sm:text-[15px] uppercase tracking-widest text-[#2C2C2C] font-bold mt-2">2026</p>
                 </div>
 
                 <a
-                  href="https://maps.app.goo.gl/RU45U8xe2TiZsmL98"
+                  href="https://maps.app.goo.gl/tBW7gLJHyUJ9rjUq8"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="space-y-2 mt-2 sm:mt-4 text-[#2C2C2C] hover:opacity-70 transition-opacity block"
                 >
                   <p className="text-[12px] sm:text-sm uppercase tracking-widest font-bold flex items-center justify-center gap-1.5">
                     <MapPin size={12} className="text-[#8B7355]" />
-                    HERITAGE GRAND
+                    BALMORAL BALLROOM
                   </p>
-                  <p className="text-[11px] sm:text-[12px] uppercase tracking-[0.15em] font-medium">BADULLA</p>
-                  <p className="text-[11px] sm:text-[12px] uppercase tracking-[0.15em] font-medium px-4">NO. 205, KEPPETIPOLA ROAD, BADULLA</p>
+                  <p className="text-[11px] sm:text-[12px] uppercase tracking-[0.15em] font-medium">THE KINGSBURY HOTEL</p>
+                  <p className="text-[11px] sm:text-[12px] uppercase tracking-[0.15em] font-medium px-4">COLOMBO</p>
                 </a>
 
                 <div className="mt-8 sm:mt-10">
@@ -246,45 +246,7 @@ export default function StoryApp() {
           </div>
         </section>
 
-        {/* --- SCREEN 1.5: Parents --- */}
-        <section className="snap-section relative z-10 overflow-hidden">
-          <SectionBackground />
-          <div className="absolute inset-0 overflow-y-auto no-scrollbar flex flex-col items-center p-6 text-center">
-            <div className="w-full my-auto flex flex-col items-center justify-center py-10">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1 }}
-                className="bg-white p-10 pt-16 rounded-t-[10rem] rounded-b-[2rem] border border-[#EAE1D3] w-full max-w-sm flex flex-col items-center shadow-xl relative overflow-hidden"
-              >
-                {/* Subtle texture overlay on the card */}
-                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/dust.png')] opacity-30 pointer-events-none mix-blend-overlay" />
-
-                <div className="relative z-10 w-full flex flex-col items-center text-center">
-                  <h2 className="script text-6xl text-[#C8B29E] mb-3">Together with</h2>
-                  <h3 className="serif text-[13px] uppercase tracking-[0.3em] text-[#3D2B1F] mb-10 font-bold">Our Families</h3>
-
-                  <div className="flex flex-col items-center w-full mb-8">
-                    <p className="text-[11px] uppercase tracking-[0.2em] text-zinc-400 mb-3 font-bold">Bride's Parents</p>
-                    <p className="serif text-xl text-[#2C2C2C] leading-relaxed text-center">Mr. Upul Bandara Yapa<br/>&amp; Mrs. Kamani Priyanthi Yapa</p>
-                  </div>
-
-                  {/* Elegant Divider */}
-                  <div className="flex items-center justify-center gap-3 w-3/4 mx-auto mb-8">
-                    <div className="h-px bg-[#EAE1D3] flex-1"></div>
-                    <div className="w-1.5 h-1.5 rotate-45 bg-[#C8B29E]"></div>
-                    <div className="h-px bg-[#EAE1D3] flex-1"></div>
-                  </div>
-
-                  <div className="flex flex-col items-center w-full">
-                    <p className="text-[11px] uppercase tracking-[0.2em] text-zinc-400 mb-3 font-bold">Groom's Parents</p>
-                    <p className="serif text-xl text-[#2C2C2C] leading-relaxed text-center">Mr. Sunil Delpearachchige<br/>&amp; Mrs. Manjula Delpearachchige</p>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
+        {/* --- SCREEN 1.5: Parents removed as per request --- */}
 
         {/* --- SCREEN 1.75: Countdown --- */}
         <section className="snap-section relative z-10 overflow-hidden">
@@ -340,36 +302,29 @@ export default function StoryApp() {
         </section>
 
         {/* --- SCREEN 2: Couple Screen --- */}
-        <section className="snap-section relative z-10 overflow-hidden bg-white rounded-t-[2.5rem]">
-          <div className="absolute inset-0 overflow-y-auto no-scrollbar flex flex-col items-center justify-start text-center">
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 1 }}
-              className="w-full h-[65dvh] shrink-0 relative"
-            >
-              <img
-                src="/4.jpg.jpeg"
-                alt="Couple"
-                className="w-full h-full object-cover object-top"
-              />
-              {/* Soft white gradient at the bottom to blend into the text section */}
-              <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
-            </motion.div>
-
+        <section className="snap-section relative z-10 overflow-hidden bg-transparent rounded-t-[2.5rem]">
+          <SectionBackground />
+          <div className="absolute inset-0 overflow-y-auto no-scrollbar flex flex-col items-center justify-center text-center p-6">
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.2 }}
-              className="flex-1 w-full flex flex-col items-center justify-start text-center pt-2 pb-12 z-20 bg-white"
+              className="w-full max-w-sm mx-auto flex flex-col items-center justify-center text-center z-20 bg-white/60 backdrop-blur-md p-8 py-14 rounded-[2.5rem] border border-white/60 shadow-xl"
             >
-              <h2 className="serif text-6xl md:text-7xl text-[#2C2C2C] font-normal leading-none mt-4">
-                SHAKILA
-              </h2>
-              <span className="script text-5xl md:text-6xl text-[#2C2C2C] my-1 opacity-80">and</span>
+              <p className="text-[12px] uppercase tracking-[0.2em] font-bold text-[#8B7355] mb-6">THE BRIDE &amp; GROOM</p>
               <h2 className="serif text-6xl md:text-7xl text-[#2C2C2C] font-normal leading-none">
-                MADAWA
+                HIRUNI
               </h2>
+              <span className="script text-5xl md:text-6xl text-[#2C2C2C] my-4 opacity-80">and</span>
+              <h2 className="serif text-6xl md:text-7xl text-[#2C2C2C] font-normal leading-none">
+                PUBUDU
+              </h2>
+              <div className="flex items-center justify-center gap-3 w-3/4 mx-auto mt-8 mb-6">
+                <div className="h-px bg-[#EAE1D3] flex-1"></div>
+                <div className="w-1.5 h-1.5 rotate-45 bg-[#C8B29E]"></div>
+                <div className="h-px bg-[#EAE1D3] flex-1"></div>
+              </div>
+              <p className="text-[11px] uppercase tracking-[0.2em] font-medium text-[#2C2C2C]">BEGIN THEIR FOREVER</p>
             </motion.div>
           </div>
         </section>
@@ -378,46 +333,7 @@ export default function StoryApp() {
 
 
 
-        {/* --- SCREEN 4: Timeline --- */}
-        <section className="snap-section relative z-10 overflow-hidden">
-          <SectionBackground />
-          <div className="absolute inset-0 overflow-y-auto no-scrollbar flex flex-col items-center p-6 text-center">
-            <div className="w-full my-auto flex flex-col items-center justify-center py-10">
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-                className="bg-white/40 backdrop-blur-md p-8 rounded-[2rem] border border-white/60 w-full max-w-sm flex flex-col items-center shadow-lg py-12"
-              >
-                <h2 className="serif text-4xl tracking-[0.2em] text-[#3D2B1F] font-medium uppercase mb-2">
-                  Wedding
-                </h2>
-                <h3 className="script text-5xl text-[#8B7355] mb-10">
-                  Timeline
-                </h3>
-
-                <div className="flex flex-col gap-6 w-full relative">
-                  {/* Timeline line */}
-                  <div className="absolute left-1/2 top-0 bottom-0 w-px bg-zinc-300 -translate-x-1/2" />
-
-                  {[
-                    { time: "8:30 AM", title: "GUEST ARRIVAL" },
-                    { time: "9:50 AM", title: "PORUWA CEREMONY" },
-                    { time: "12:30 PM", title: "WEDDING RECEPTION" },
-                    { time: "1:30 PM", title: "LUNCH BUFFET" },
-                    { time: "4:30 PM", title: "GOING AWAY" },
-                  ].map((item, idx) => (
-                    <div key={idx} className="relative z-10 bg-white/70 backdrop-blur-sm p-4 rounded-xl border border-white shadow-sm w-[85%] mx-auto">
-                      <p className="text-[13px] font-bold text-[#8B7355] mb-1">{item.time}</p>
-                      <p className="text-[12px] uppercase tracking-widest text-[#3D2B1F] font-semibold">{item.title}</p>
-                      {item.sub && <p className="serif text-[12px] italic text-zinc-500 mt-1">{item.sub}</p>}
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
+        {/* Timeline removed as requested */}
 
         {/* --- SCREEN 5: The Details --- */}
         <section className="snap-section relative z-10 overflow-hidden">
@@ -435,18 +351,18 @@ export default function StoryApp() {
                   <h2 className="serif text-4xl tracking-[0.2em] text-[#3D2B1F] font-medium uppercase mb-6">Details</h2>
 
                   <div className="w-full h-32 rounded-xl overflow-hidden mb-4 relative">
-                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/cd/08/b1/caption.jpg?w=900&h=500&s=1" className="w-full h-full object-cover" alt="Venue" />
+                    <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkxd59KvQyeGrloMsvzrOoVVjWaZxTt9tLBx1Sgr_nnHm9CNJkV1dVm0JRo9xjmDa4A_Xu1Hbv6Hrs57dbEAF_haF7ye1OzkT8B3b3ElMUgAEa-zbqcBNzSjN_ppMBn1Y7Ilcb0n6GwWxcE=w408-h393-k-no" className="w-full h-full object-cover" alt="Venue" />
                   </div>
 
                   <div className="bg-[#EAE1D3] py-2 rounded-t-xl mb-1">
                     <p className="text-[12px] uppercase tracking-[0.2em] font-bold text-[#8B7355]">Location</p>
                   </div>
                   <div className="bg-white py-4 rounded-b-xl shadow-sm border border-white mb-4 flex flex-col items-center">
-                    <p className="text-[12px] uppercase font-bold text-[#3D2B1F]">Heritage Grand</p>
-                    <p className="text-[10px] uppercase tracking-widest text-zinc-500 mt-1">Badulla</p>
-                    <p className="text-[10px] uppercase tracking-widest text-zinc-500 mb-3 px-2 text-center">No. 205, Keppetipola Road, Badulla</p>
+                    <p className="text-[12px] uppercase font-bold text-[#3D2B1F]">Balmoral Ballroom</p>
+                    <p className="text-[10px] uppercase tracking-widest text-zinc-500 mt-1">The Kingsbury Hotel</p>
+                    <p className="text-[10px] uppercase tracking-widest text-zinc-500 mb-3 px-2 text-center">Colombo</p>
                     <a
-                      href="https://maps.app.goo.gl/XrNGSDx3cGwqkxE49"
+                      href="https://maps.app.goo.gl/tBW7gLJHyUJ9rjUq8"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1 px-3 py-1.5 bg-[#EAE1D3] text-[#3D2B1F] rounded-full text-[10px] uppercase tracking-widest font-bold hover:bg-[#C8B29E] transition-colors"

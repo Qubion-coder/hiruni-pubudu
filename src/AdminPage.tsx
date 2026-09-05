@@ -9,7 +9,7 @@ export default function AdminPage() {
   const [copiedType, setCopiedType] = useState<'link' | 'message' | null>(null);
 
   const generateMessage = (pfx: string, name: string, url: string) => {
-    return `Dear ${pfx} ${name} ❤️\n\nWith joyful hearts, we warmly invite you to celebrate one of the most special days of our lives as we begin our journey together.\n\nPlease view our wedding invitation and all the event details through the link below 🌐:\n\n${url}\n\nYour presence would truly mean the world to us, and we would be honored to celebrate this beautiful moment together.\n\nWith love,\n❤️ Shakila & Madawa`;
+    return `Dear ${pfx} ${name} ❤️\n\nWith joyful hearts, we warmly invite you to celebrate one of the most special days of our lives as we begin our journey together.\n\nPlease view our wedding invitation and all the event details through the link below 🌐:\n\n${url}\n\nYour presence would truly mean the world to us, and we would be honored to celebrate this beautiful moment together.\n\nWith love,\n❤️ Hiruni & Pubudu`;
   };
 
   const handleGenerate = () => {

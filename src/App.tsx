@@ -210,7 +210,7 @@ type GuestEntry = {
 };
 
 function RSVPForm() {
-  const endpoint = "https://script.google.com/macros/s/AKfycbyaa258bY2m1_hIt0yk6IzPvQES8xhDoH1mXVZWep9zd54mmFTJG8sBDKIY-9I6x66oHA/exec";
+  const endpoint = "https://script.google.com/macros/s/AKfycbxgONGXL7EoqGCJ_XB_ilKi1a7caADc7R7BL66bfZ_lR71_vbPgLFSjJ4hJN6jiJf7z/exec";
 
   const [attendance, setAttendance] = useState<Attendance>("yes");
   const [partyType, setPartyType] = useState<PartyType>("individual");
