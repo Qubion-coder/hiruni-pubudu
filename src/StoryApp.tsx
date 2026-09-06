@@ -302,24 +302,33 @@ export default function StoryApp() {
         </section>
 
         {/* --- SCREEN 2: Couple Screen --- */}
-        <section className="snap-section relative z-10 overflow-hidden bg-transparent rounded-t-[2.5rem]">
-          <SectionBackground />
-          <div className="absolute inset-0 overflow-y-auto no-scrollbar flex flex-col items-center justify-center text-center p-6">
+        <section className="snap-section relative z-10 overflow-hidden bg-[#FAFAFA]">
+          {/* Top Image with Gradient Fade to White */}
+          <div className="absolute top-0 left-0 right-0 h-[70%] z-0 pointer-events-none">
+            <img
+              src="/WhatsApp Image 2026-09-06 at 22.37.17.jpeg"
+              alt="Couple"
+              className="w-full h-full object-cover object-top"
+            />
+            {/* Gradient to fade the image into the background below */}
+            <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-b from-transparent to-[#FAFAFA]" />
+          </div>
+
+          <div className="absolute inset-0 overflow-y-auto no-scrollbar flex flex-col items-center justify-end text-center p-6 pb-8 md:pb-20">
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.2 }}
-              className="w-full max-w-sm mx-auto flex flex-col items-center justify-center text-center z-20 bg-white/60 backdrop-blur-md p-8 py-14 rounded-[2.5rem] border border-white/60 shadow-xl"
+              className="w-full max-w-sm mx-auto flex flex-col items-center justify-center text-center z-20 pt-16 md:pt-10"
             >
-              <p className="text-[12px] uppercase tracking-[0.2em] font-bold text-[#8B7355] mb-6">THE BRIDE &amp; GROOM</p>
-              <h2 className="serif text-6xl md:text-7xl text-[#2C2C2C] font-normal leading-none">
+              <h2 className="serif text-5xl sm:text-6xl md:text-7xl text-[#2C2C2C] font-normal leading-none">
                 HIRUNI
               </h2>
-              <span className="script text-5xl md:text-6xl text-[#2C2C2C] my-4 opacity-80">and</span>
-              <h2 className="serif text-6xl md:text-7xl text-[#2C2C2C] font-normal leading-none">
+              <span className="script text-4xl sm:text-5xl md:text-6xl text-[#2C2C2C] my-3 opacity-80">and</span>
+              <h2 className="serif text-5xl sm:text-6xl md:text-7xl text-[#2C2C2C] font-normal leading-none">
                 PUBUDU
               </h2>
-              <div className="flex items-center justify-center gap-3 w-3/4 mx-auto mt-8 mb-6">
+              <div className="flex items-center justify-center gap-3 w-3/4 mx-auto mt-6 mb-4">
                 <div className="h-px bg-[#EAE1D3] flex-1"></div>
                 <div className="w-1.5 h-1.5 rotate-45 bg-[#C8B29E]"></div>
                 <div className="h-px bg-[#EAE1D3] flex-1"></div>
