@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 
 export default function RSVPForm() {
-  const endpoint = "https://script.google.com/macros/s/AKfycbxgONGXL7EoqGCJ_XB_ilKi1a7caADc7R7BL66bfZ_lR71_vbPgLFSjJ4hJN6jiJf7z/exec";
+  const endpoint = "https://script.google.com/macros/s/AKfycbz5PgrZAwzmYF4PwARklYJumvek0CglxxhF0r_nwpuuUQWv1RzqV9N7p8u5Q2HMM9pD/exec";
 
   const [attendance, setAttendance] = useState<"yes" | "no">("yes");
   const [name, setName] = useState<string>("");
+  const [guestCount, setGuestCount] = useState<string>("1");
 
   const [submitting, setSubmitting] = useState(false);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
@@ -37,6 +38,7 @@ export default function RSVPForm() {
     const payload = {
       name: name.trim(),
       attendance,
+      guestCount: attendance === "yes" ? (parseInt(guestCount, 10) || 1) : 0,
       submittedAt: new Date().toISOString(),
     };
 
@@ -93,6 +95,22 @@ export default function RSVPForm() {
             className="w-full rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-base text-[#3D2B1F] font-serif outline-none focus:border-[#C8B29E] focus:ring-1 focus:ring-[#C8B29E]"
           />
         </div>
+
+        {attendance === "yes" && (
+          <div className="text-left space-y-1.5">
+            <label className="text-[11px] uppercase tracking-widest font-bold text-[#8B7355] ml-1">
+              Total Guests
+            </label>
+            <input
+              type="number"
+              min="1"
+              value={guestCount}
+              onChange={(ev) => setGuestCount(ev.target.value)}
+              placeholder="Number of Guests"
+              className="w-full rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-base text-[#3D2B1F] font-serif outline-none focus:border-[#C8B29E] focus:ring-1 focus:ring-[#C8B29E]"
+            />
+          </div>
+        )}
 
         {errorMessage && <p className="text-[12px] text-red-600 font-semibold">{errorMessage}</p>}
         {successMessage && <p className="text-[12px] text-[#8B7355] font-bold">{successMessage}</p>}
